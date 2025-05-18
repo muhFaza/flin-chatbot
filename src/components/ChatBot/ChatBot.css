@@ -1,0 +1,238 @@
+.chat-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chat-widget-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  background-color: #4B7DBF;
+  color: #FAFAFA;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.chat-widget-button:hover {
+  transform: scale(1.05);
+  background-color: #4B7DBF;
+  outline: none;
+}
+
+.chat-widget-button.active {
+  transform: scale(1.1);
+  background-color: #4B7DBF;
+  outline: none;
+}
+
+.chat-widget-window {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background-color: #FAFAFA;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.chat-widget-header {
+  padding: 8px 14px;
+  background-color: #4B7DBF;
+  color: #FAFAFA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-widget-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.minimize-button {
+  background: none;
+  border: none;
+  color: #FAFAFA;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-widget-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  margin-left: auto;
+  background-color: #6dacff;
+  border-radius: 18px 18px 0 18px;
+  padding: 12px 15px;
+  text-align: right;
+}
+
+.message.bot {
+  margin-right: auto;
+  background-color: #FAFAFA;
+  color: #333333;
+  border-radius: 18px 18px 18px 0;
+  padding: 12px 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.message.suggestions {
+  width: 100%;
+  max-width: 100%;
+  background: none;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chat-widget-input {
+  display: flex;
+  padding: 10px 15px;
+  border-top: 1px solid #eaeaea;
+  background-color: #FAFAFA;
+}
+
+.chat-widget-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-widget-input input:focus {
+  border-color: #4B7DBF;
+}
+
+.chat-widget-input button {
+  margin-left: 10px;
+  padding: 0 15px;
+  background-color: #4B7DBF;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chat-widget-input button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.chat-widget-suggestions {
+  padding: 10px 15px;
+  border-top: 1px solid #eaeaea;
+  background-color: #FAFAFA;
+}
+
+.chat-widget-suggestions p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.suggestion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-chip {
+  padding: 6px 12px;
+  background-color: #91bef8;
+  border: none;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.suggestion-chip:hover {
+  background-color: #6dacff;
+  outline: none;
+}
+.suggestion-chip:focus {
+  outline: none;
+}
+
+.suggestion-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.suggestion-buttons p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.suggestion-button {
+  padding: 8px 12px;
+  background-color: #91bef8;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+}
+
+.suggestion-button:hover {
+  background-color: #6dacff;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .chat-widget-window {
+    width: calc(100vw - 40px);
+    height: 450px;
+    right: 0;
+    bottom: 70px;
+  }
+}
