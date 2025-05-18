@@ -1,12 +1,87 @@
-# React + Vite
+# FLIN Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting Started
 
-Currently, two official plugins are available:
+### Clone the repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+git clone https://github.com/muhFaza/flin-chatbot.git
+cd flin-chatbot
+```
 
-## Expanding the ESLint configuration
+### Install dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+This will start the development server at [http://localhost:5173](http://localhost:5173). The page will reload if you make edits to the source files.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in development mode with hot-reload.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder. The build is minified and optimized for best performance.
+
+### `npm run preview`
+
+Serves the production build locally to preview it before deployment.
+
+## Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+This command:
+- Minifies JavaScript and CSS
+- Optimizes images
+- Generates content hashes for long-term caching
+- Creates compressed versions of assets (gzip, brotli)
+- Splits code into chunks for better loading performance
+
+The output will be in the `dist` directory, ready to be deployed to any static hosting service.
+
+## Deployment
+
+After building the project, you can deploy the contents of the `dist` directory to any static hosting service:
+
+- Netlify
+- Vercel
+- GitHub Pages
+- Firebase Hosting
+- Any traditional web hosting via FTP
+
+Example deployment to Netlify:
+
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Deploy
+netlify deploy --prod --dir=dist
+```
+
+## Performance Optimization
+
+This project includes the following optimizations:
+
+- Code splitting for efficient loading
+- Image optimization with ViteImageOptimizer
+- CSS and JS minification
+- Image compression
+- Lazy loading of components and images
