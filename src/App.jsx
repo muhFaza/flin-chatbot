@@ -1,4 +1,6 @@
-// import './App.css'
+import logo from './assets/flin-logo.png'
+import family from './assets/flin-family.png'
+import komdigi from './assets/komdigi.png'
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
         <header className="py-4 px-6 border-b">
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center">
-                <img src="src/assets/flin-logo.png" alt="logo" className='w-[160px]' />
+                <img src={logo} alt="logo" loading="lazy" width='160px' height='45px' />
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -63,14 +65,14 @@ function App() {
                 <div className="mt-16 p-2 px-4 border-[2px] border-[#D2E4F8] rounded-lg flex-col items-center justify-center">
                   <div className="mr-2 text-xs text-center">Terdaftar di:</div>
                   <div className="">
-                    <img src="src/assets/komdigi.png" alt="KOMDIGI Logo" className="w-[74px] h-auto" />
+                    <img src={komdigi} loading="lazy" width='74px' height='74px' alt="KOMDIGI Logo" className="h-auto" />
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="md:w-1/2 flex justify-center">
-              <img src="src/assets/flin-family.png" alt="Happy Family" className="rounded-lg max-w-[640px] h-auto" />
+              <img src={family} alt="Happy Family" loading="lazy" width='640px' height='556px' className="rounded-lg h-auto" />
             </div>
           </div>
         </section>
